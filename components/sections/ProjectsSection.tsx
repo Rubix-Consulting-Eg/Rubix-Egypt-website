@@ -41,9 +41,22 @@ const innerCard = {
   border: "1px solid rgba(255,255,255,0.08)",
   borderRadius: 2,
 };
-const sectionTitle = { fontWeight: 700, mb: 2, color: "primary.light", fontSize: "1.1rem" };
-const bodyText = { color: "text.secondary", lineHeight: 1.75, fontSize: "0.9375rem" };
-const cardTitle = { fontWeight: 700, color: "primary.main", fontSize: "0.95rem" };
+const sectionTitle = {
+  fontWeight: 700,
+  mb: 2,
+  color: "primary.light",
+  fontSize: "1.1rem",
+};
+const bodyText = {
+  color: "text.secondary",
+  lineHeight: 1.75,
+  fontSize: "0.9375rem",
+};
+const cardTitle = {
+  fontWeight: 700,
+  color: "primary.main",
+  fontSize: "0.95rem",
+};
 
 function AnimatedProgressBar({
   value,
@@ -337,7 +350,7 @@ function RashadContent() {
           },
           {
             icon: RequestQuoteIcon,
-            title: "6. RFP Creator (New)",
+            title: "6. RFP Creator",
             desc: "Generates Request for Proposal (RFP) documents even when no template is provided. Collects project requirements directly from the user through an interactive form, processes the data, generates a structured RFP, and displays it ready for download or sharing.",
           },
         ].map((m) => (
@@ -1441,10 +1454,21 @@ function AIStudiesContent() {
           py: 0.5,
         }}
       >
-        <Typography variant="h6" sx={{ fontWeight: 700, mb: 0.5, color: "primary.light", fontSize: "1.15rem" }}>
+        <Typography
+          variant="h6"
+          sx={{
+            fontWeight: 700,
+            mb: 0.5,
+            color: "primary.light",
+            fontSize: "1.15rem",
+          }}
+        >
           McKinsey & Company
         </Typography>
-        <Typography variant="caption" sx={{ color: "text.secondary", fontSize: "0.8rem" }}>
+        <Typography
+          variant="caption"
+          sx={{ color: "text.secondary", fontSize: "0.8rem" }}
+        >
           Source: McKinsey Official Website (mckinsey.com)
         </Typography>
       </Box>
@@ -1454,19 +1478,49 @@ function AIStudiesContent() {
           McKinsey Lilli – AI Knowledge Assistant
         </Typography>
 
-        <Typography variant="caption" sx={{ fontWeight: 700, color: "primary.light", display: "block", mb: 0.5, fontSize: "0.8rem" }}>
+        <Typography
+          variant="caption"
+          sx={{
+            fontWeight: 700,
+            color: "primary.light",
+            display: "block",
+            mb: 0.5,
+            fontSize: "0.8rem",
+          }}
+        >
           Why It Was Created
         </Typography>
-        <Box component="ul" sx={{ m: 0, pl: 2.5, ...bodyText, mb: 2, "& li": { mb: 0.5 } }}>
-          <li>McKinsey: 100+ years of experience, 100,000+ documents, experts across 70+ countries</li>
+        <Box
+          component="ul"
+          sx={{ m: 0, pl: 2.5, ...bodyText, mb: 2, "& li": { mb: 0.5 } }}
+        >
+          <li>
+            McKinsey: 100+ years of experience, 100,000+ documents, experts
+            across 70+ countries
+          </li>
           <li>Before Lilli: finding info and experts took days or weeks</li>
-          <li>Goal: turn McKinsey&apos;s knowledge into instant, actionable insights</li>
+          <li>
+            Goal: turn McKinsey&apos;s knowledge into instant, actionable
+            insights
+          </li>
         </Box>
 
-        <Typography variant="caption" sx={{ fontWeight: 700, color: "primary.light", display: "block", mb: 0.5, fontSize: "0.8rem" }}>
+        <Typography
+          variant="caption"
+          sx={{
+            fontWeight: 700,
+            color: "primary.light",
+            display: "block",
+            mb: 0.5,
+            fontSize: "0.8rem",
+          }}
+        >
           What Lilli Does
         </Typography>
-        <Box component="ul" sx={{ m: 0, pl: 2.5, ...bodyText, mb: 2, "& li": { mb: 0.5 } }}>
+        <Box
+          component="ul"
+          sx={{ m: 0, pl: 2.5, ...bodyText, mb: 2, "& li": { mb: 0.5 } }}
+        >
           <li>Searches internal knowledge in seconds</li>
           <li>Highlights 5–7 key sources</li>
           <li>Summarizes insights clearly</li>
@@ -1474,27 +1528,67 @@ function AIStudiesContent() {
           <li>Two modes: Internal and External</li>
         </Box>
 
-        <Typography variant="caption" sx={{ fontWeight: 700, color: "primary.light", display: "block", mb: 0.5, fontSize: "0.8rem" }}>
+        <Typography
+          variant="caption"
+          sx={{
+            fontWeight: 700,
+            color: "primary.light",
+            display: "block",
+            mb: 0.5,
+            fontSize: "0.8rem",
+          }}
+        >
           How It Helps
         </Typography>
-        <Box component="ul" sx={{ m: 0, pl: 2.5, ...bodyText, mb: 2, "& li": { mb: 0.5 } }}>
-          <li><strong>Saves Time</strong> – weeks → hours/minutes</li>
-          <li><strong>Improves Thinking</strong> – tests logic, anticipates questions, connects insights</li>
-          <li><strong>Inspires Ideas</strong> – cross-industry comparisons and new perspectives</li>
+        <Box
+          component="ul"
+          sx={{ m: 0, pl: 2.5, ...bodyText, mb: 2, "& li": { mb: 0.5 } }}
+        >
+          <li>
+            <strong>Saves Time</strong> – weeks → hours/minutes
+          </li>
+          <li>
+            <strong>Improves Thinking</strong> – tests logic, anticipates
+            questions, connects insights
+          </li>
+          <li>
+            <strong>Inspires Ideas</strong> – cross-industry comparisons and new
+            perspectives
+          </li>
         </Box>
 
-        <Typography variant="caption" sx={{ fontWeight: 700, color: "primary.light", display: "block", mb: 0.5, fontSize: "0.8rem" }}>
+        <Typography
+          variant="caption"
+          sx={{
+            fontWeight: 700,
+            color: "primary.light",
+            display: "block",
+            mb: 0.5,
+            fontSize: "0.8rem",
+          }}
+        >
           How It Works
         </Typography>
         <Typography variant="body2" sx={{ ...bodyText, mb: 2 }}>
-          User asks a question → scans knowledge base → selects key content → summarizes → shows sources & experts
+          User asks a question → scans knowledge base → selects key content →
+          summarizes → shows sources & experts
         </Typography>
 
-        <Typography variant="caption" sx={{ fontWeight: 700, color: "primary.light", display: "block", mb: 0.5, fontSize: "0.8rem" }}>
+        <Typography
+          variant="caption"
+          sx={{
+            fontWeight: 700,
+            color: "primary.light",
+            display: "block",
+            mb: 0.5,
+            fontSize: "0.8rem",
+          }}
+        >
           Impact
         </Typography>
         <Typography variant="body2" sx={{ ...bodyText }}>
-          Boosts productivity, insight quality, and creativity. Changes how consultants work, enabling better work, not just faster work.
+          Boosts productivity, insight quality, and creativity. Changes how
+          consultants work, enabling better work, not just faster work.
         </Typography>
       </Card>
 
@@ -1690,7 +1784,10 @@ function AIStudiesContent() {
             border: "1px solid rgba(190, 14, 91, 0.3)",
           }}
         >
-          <Typography variant="caption" sx={{ fontWeight: 700, color: "primary.light", letterSpacing: 0.5 }}>
+          <Typography
+            variant="caption"
+            sx={{ fontWeight: 700, color: "primary.light", letterSpacing: 0.5 }}
+          >
             NEW COMPANY
           </Typography>
         </Box>
@@ -1704,10 +1801,21 @@ function AIStudiesContent() {
           py: 0.5,
         }}
       >
-        <Typography variant="h6" sx={{ fontWeight: 700, mb: 0.5, color: "primary.light", fontSize: "1.15rem" }}>
+        <Typography
+          variant="h6"
+          sx={{
+            fontWeight: 700,
+            mb: 0.5,
+            color: "primary.light",
+            fontSize: "1.15rem",
+          }}
+        >
           Boston Consulting Group (BCG) — AI at Scale
         </Typography>
-        <Typography variant="caption" sx={{ color: "text.secondary", fontSize: "0.8rem" }}>
+        <Typography
+          variant="caption"
+          sx={{ color: "text.secondary", fontSize: "0.8rem" }}
+        >
           Source: bcg.com/capabilities/artificial-intelligence
         </Typography>
       </Box>
@@ -1717,9 +1825,13 @@ function AIStudiesContent() {
           Core Statement
         </Typography>
         <Typography variant="body2" sx={{ ...bodyText, mb: 1.5 }}>
-          BCG helps organizations combine human and technological capabilities to maximize value, productivity, and innovation from AI.
+          BCG helps organizations combine human and technological capabilities
+          to maximize value, productivity, and innovation from AI.
         </Typography>
-        <Typography variant="body2" sx={{ ...bodyText, fontWeight: 600, color: "primary.light" }}>
+        <Typography
+          variant="body2"
+          sx={{ ...bodyText, fontWeight: 600, color: "primary.light" }}
+        >
           Predictive AI + Generative AI = stronger, sustained AI value creation
         </Typography>
       </Card>
@@ -1774,7 +1886,8 @@ function AIStudiesContent() {
           AI Approach
         </Typography>
         <Typography variant="body2" sx={{ ...bodyText, mb: 2 }}>
-          Every AI transformation is customized for the organization&apos;s context and goals.
+          Every AI transformation is customized for the organization&apos;s
+          context and goals.
         </Typography>
         <Typography
           variant="caption"
@@ -1846,7 +1959,8 @@ function AIStudiesContent() {
           ))}
         </Grid>
         <Typography variant="body2" sx={{ ...bodyText, mt: 2 }}>
-          BCG strengthens these plays by ensuring robust technology, skilled people, and risk-aware foundations.
+          BCG strengthens these plays by ensuring robust technology, skilled
+          people, and risk-aware foundations.
         </Typography>
       </Card>
 
@@ -1865,14 +1979,18 @@ function AIStudiesContent() {
           }}
         >
           <li>
-            <strong>BCG X Products</strong> – ready-to-use AI solutions backed by science, IP, and advanced AI components
+            <strong>BCG X Products</strong> – ready-to-use AI solutions backed
+            by science, IP, and advanced AI components
           </li>
           <li>
-            <strong>AI Ecosystem & Partners</strong> – collaborations with AWS, Google, IBM, Microsoft, Salesforce, SAP, OpenAI, Anthropic, LangChain, Palantir, etc.
+            <strong>AI Ecosystem & Partners</strong> – collaborations with AWS,
+            Google, IBM, Microsoft, Salesforce, SAP, OpenAI, Anthropic,
+            LangChain, Palantir, etc.
           </li>
         </Box>
         <Typography variant="body2" sx={{ ...bodyText }}>
-          Supports optimizing technology, reshaping functions, inventing opportunities, and reimagining organizations.
+          Supports optimizing technology, reshaping functions, inventing
+          opportunities, and reimagining organizations.
         </Typography>
       </Card>
 
@@ -1884,7 +2002,8 @@ function AIStudiesContent() {
           Only 25% of companies achieve ROI from AI investments.
         </Typography>
         <Typography variant="body2" sx={{ ...bodyText }}>
-          Leaders succeed by rethinking workflows, aligning incentives, and focusing on value.
+          Leaders succeed by rethinking workflows, aligning incentives, and
+          focusing on value.
         </Typography>
       </Card>
     </>
