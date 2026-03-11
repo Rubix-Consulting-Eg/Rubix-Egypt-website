@@ -3,15 +3,10 @@
 import { createTheme } from "@mui/material/styles";
 
 declare module "@mui/material/styles" {
-  interface Palette {
-    primary: {
-      main: string;
-      dark: string;
-      light: string;
-      600: string;
-      700: string;
-      900: string;
-    };
+  interface PaletteColor {
+    600?: string;
+    700?: string;
+    900?: string;
   }
 }
 
