@@ -2079,7 +2079,7 @@ export default function ProjectsSection() {
               bg: "rgba(255,193,7,0.2)",
               color: "#ffc107",
             },
-            { label: "MVP: MAY 2025", bg: "#260312", color: "#FF6B9D" },
+            { label: "MVP: MAY 2026", bg: "#260312", color: "#FF6B9D" },
           ]}
           open={open === "rashad"}
           onToggle={() => toggle("rashad")}
