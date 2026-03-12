@@ -36,7 +36,7 @@ const team = [
     name: "Abdelrhman Nashaat",
     role: "Product Engineering Lead – Mobile",
     desc: "Leads mobile product engineering and contributes to cross-platform solution design and implementation.",
-    image: null as string | null,
+    image: "/abdo.jpeg",
   },
   {
     initials: "ME",
