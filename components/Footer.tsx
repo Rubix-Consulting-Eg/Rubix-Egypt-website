@@ -1,143 +1,155 @@
 "use client";
 
+import { motion } from "framer-motion";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 import Image from "next/image";
+import IconButton from "@mui/material/IconButton";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import IconButton from "@mui/material/IconButton";
+import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 
 const columns = [
   {
     title: "Navigate",
     links: [
       { label: "About", href: "#about" },
+      { label: "Roadmap", href: "#roadmap" },
       { label: "Projects", href: "#projects" },
       { label: "Team", href: "#team" },
       { label: "Vision", href: "#vision" },
-    ],
-  },
-  {
-    title: "Resources",
-    links: [
-      { label: "Get In Touch", href: "#about" },
-      { label: "Explore Projects", href: "#projects" },
+      { label: "Location", href: "#location" },
     ],
   },
 ];
 
 export default function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <Box
       component="footer"
       sx={{
-        py: 6,
-        borderTop: "1px solid rgba(255,255,255,0.08)",
+        position: "relative",
+        pt: 8,
+        pb: 4,
         bgcolor: "#0A0A0F",
+        borderTop: "1px solid rgba(255,255,255,0.06)",
+        overflow: "hidden",
+        "&::before": {
+          content: '""',
+          position: "absolute",
+          top: 0,
+          left: 0,
+          right: 0,
+          height: 1,
+          background:
+            "linear-gradient(90deg, transparent, #BE0E5B40, transparent)",
+          opacity: 0.6,
+        },
       }}
     >
       <Container maxWidth="lg">
         <Box
           sx={{
             display: "flex",
-            flexDirection: { xs: "column", md: "row" },
             justifyContent: "space-between",
+            flexDirection: { xs: "column", md: "row" },
             alignItems: { xs: "flex-start", md: "center" },
-            gap: 4,
-            flexWrap: "wrap",
+            gap: { xs: 5, md: 6 },
+            mb: 5,
           }}
         >
-          <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
-            <Box
-              sx={{
-                display: "inline-flex",
-                px: 2,
-                py: 1,
-                borderRadius: 2,
-
-                alignSelf: "flex-start",
-              }}
-            >
+          {/* Brand block */}
+          <Box sx={{ maxWidth: 320 }}>
+            <Link href="#" sx={{ display: "inline-block", mb: 2 }}>
               <Image
                 src="/logo.png"
                 alt="Rubix Egypt"
-                width={120}
-                height={40}
+                width={130}
+                height={44}
                 style={{ objectFit: "contain" }}
               />
-            </Box>
+            </Link>
             <Typography
               variant="body2"
-              sx={{ color: "text.secondary", maxWidth: 260 }}
+              sx={{
+                color: "text.secondary",
+                lineHeight: 1.7,
+                mb: 2,
+                fontSize: "0.9rem",
+              }}
             >
-              AI-Driven Software Development & Consulting Automation
+              AI Intelligence, Product Engineering & Digital Platforms for
+              Rubix.
             </Typography>
           </Box>
-          <Box sx={{ display: "flex", gap: 6 }}>
-            {columns.map((col) => (
-              <Box key={col.title}>
-                <Typography
-                  variant="overline"
-                  sx={{
-                    color: "text.secondary",
-                    letterSpacing: 1,
-                    fontWeight: 600,
-                  }}
-                >
-                  {col.title}
-                </Typography>
-                <Box
-                  sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: 0.5,
-                    mt: 1,
-                  }}
-                >
-                  {col.links.map((link) => (
-                    <Link
-                      key={link.href}
-                      href={link.href}
-                      color="text.secondary"
-                      sx={{ "&:hover": { color: "primary.main" } }}
-                    >
-                      {link.label}
-                    </Link>
-                  ))}
-                </Box>
+
+          {/* Link columns */}
+          {columns.map((col) => (
+            <Box key={col.title}>
+              <Typography
+                variant="overline"
+                sx={{
+                  color: "primary.main",
+                  letterSpacing: 1.5,
+                  fontWeight: 700,
+                  fontSize: "0.7rem",
+                  display: "block",
+                  mb: 1.5,
+                }}
+              >
+                {col.title}
+              </Typography>
+              <Box sx={{ display: "flex", flexDirection: "column", gap: 0.75 }}>
+                {col.links.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    component={motion.a}
+                    whileHover={{ x: 4 }}
+                    sx={{
+                      color: "text.secondary",
+                      fontSize: "0.9rem",
+                      textDecoration: "none",
+                      transition: "color 0.2s",
+                      "&:hover": { color: "primary.light" },
+                    }}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
               </Box>
-            ))}
-          </Box>
-          <Box sx={{ display: "flex", gap: 0.5 }}>
-            <IconButton
-              href="#"
-              aria-label="LinkedIn"
-              sx={{ color: "text.secondary" }}
-            >
-              <LinkedInIcon />
-            </IconButton>
-            <IconButton
-              href="#"
-              aria-label="GitHub"
-              sx={{ color: "text.secondary" }}
-            >
-              <GitHubIcon />
-            </IconButton>
-          </Box>
+            </Box>
+          ))}
         </Box>
-        <Typography
-          variant="body2"
+
+        {/* Bottom bar */}
+        <Box
           sx={{
-            color: "text.secondary",
-            mt: 4,
-            pt: 2,
+            display: "flex",
+            flexDirection: { xs: "column", sm: "row" },
+            alignItems: { xs: "flex-start", sm: "center" },
+            justifyContent: "space-between",
+            gap: 2,
+            pt: 3,
             borderTop: "1px solid rgba(255,255,255,0.06)",
           }}
         >
-          © 2026 Rubix Egypt. Part of Rubix.
-        </Typography>
+          <Typography
+            variant="body2"
+            sx={{
+              color: "text.secondary",
+              fontSize: "0.8rem",
+            }}
+          >
+            © {new Date().getFullYear()} Rubix Egypt. Part of Rubix.
+          </Typography>
+        </Box>
       </Container>
     </Box>
   );

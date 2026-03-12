@@ -14,10 +14,20 @@ export default function VisionSection() {
         py: { xs: 7, md: 12 },
         position: "relative",
         overflow: "hidden",
-        background: "radial-gradient(ellipse 70% 60% at 50% 50%, rgba(38,3,18,0.35) 0%, transparent 70%)",
+        background:
+          "radial-gradient(ellipse 70% 60% at 50% 50%, rgba(38,3,18,0.35) 0%, transparent 70%)",
       }}
     >
-      <Box sx={{ position: "relative", zIndex: 1, maxWidth: 720, mx: "auto", textAlign: "center", px: 2 }}>
+      <Box
+        sx={{
+          position: "relative",
+          zIndex: 1,
+          maxWidth: 720,
+          mx: "auto",
+          textAlign: "center",
+          px: 2,
+        }}
+      >
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -39,27 +49,18 @@ export default function VisionSection() {
             Future Vision
           </Typography>
           <Typography sx={{ color: "text.secondary", mb: 2, lineHeight: 1.8 }}>
-            Rubix Egypt aims to be a leading technology hub, empowering Rubix&apos;s consulting services with cutting-edge software systems and AI-powered platforms.
+            Rubix AI Pulse aims to become the intelligence and product
+            engineering backbone behind Rubix&apos;s next wave of growth. Our
+            ambition is to build the internal systems, digital products, and
+            AI-enabled capabilities that make Rubix faster, smarter, and more
+            scalable.
           </Typography>
           <Typography sx={{ color: "text.secondary", mb: 4, lineHeight: 1.8 }}>
-            Our goal is to create intelligent tools that transform how consulting is delivered—making processes faster, smarter, and easier to scale—so organizations can achieve results more efficiently and effectively.
+            Over time, AI Pulse will continue transforming strategic ideas into
+            deployable platforms, strengthening consulting performance, and
+            creating new technology-led value propositions that position Rubix
+            as a truly AI-native business.
           </Typography>
-          <Button
-            component={motion.a}
-            href="#about"
-            variant="contained"
-            size="large"
-            sx={{
-              bgcolor: "primary.main",
-              px: 4,
-              py: 1.5,
-              "&:hover": { bgcolor: "primary.dark" },
-            }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            Join Our Journey
-          </Button>
         </motion.div>
       </Box>
       {/* Abstract lines decoration */}

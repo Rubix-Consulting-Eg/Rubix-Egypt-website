@@ -23,6 +23,7 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 const navLinks = [
   { label: "About", href: "#about" },
+  { label: "Roadmap", href: "#roadmap" },
   { label: "Team", href: "#team" },
   { label: "Vision", href: "#vision" },
 ];
@@ -30,7 +31,13 @@ const navLinks = [
 const projectLinks = [
   { label: "Rashad Project", href: "#rashad" },
   { label: "Worcare Project", href: "#worcare" },
-  { label: "AI Competitor Studies", href: "#ai-studies" },
+  { label: "DiagnifyAI", href: "#diagnifyai" },
+  { label: "SparkThon", href: "#sparkthon" },
+  { label: "YANA", href: "#yana" },
+  { label: "iVision", href: "#ivision" },
+  { label: "Traviom", href: "#traviom" },
+  { label: "BIMLens", href: "#bimlens" },
+  { label: "Sulhafa", href: "#sulhafa" },
 ];
 
 export default function Navbar() {

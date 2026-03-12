@@ -29,6 +29,13 @@ import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
 import ScienceIcon from "@mui/icons-material/Science";
 import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import LocalHospitalIcon from "@mui/icons-material/LocalHospital";
+import HubIcon from "@mui/icons-material/Hub";
+import SentimentSatisfiedAltIcon from "@mui/icons-material/SentimentSatisfiedAlt";
+import VisibilityIcon from "@mui/icons-material/Visibility";
+import FlightTakeoffIcon from "@mui/icons-material/FlightTakeoff";
+import ViewInArIcon from "@mui/icons-material/ViewInAr";
+import BugReportIcon from "@mui/icons-material/BugReport";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 
 const card = {
@@ -157,7 +164,9 @@ function ProjectAccordion({
           },
         }}
       >
-        <Box sx={{ display: "flex", alignItems: "center", gap: 2, minWidth: 0 }}>
+        <Box
+          sx={{ display: "flex", alignItems: "center", gap: 2, minWidth: 0 }}
+        >
           <Box
             sx={{
               flexShrink: 0,
@@ -666,19 +675,16 @@ function WorcareContent() {
           WorkCare – Supporting Your People, Elevating Your Business
         </Typography>
         <Typography sx={{ color: "text.secondary", mb: 2, lineHeight: 1.8 }}>
-          WorkCare is a holistic platform that boosts employee well-being across
-          mental, emotional, physical, purpose, and financial dimensions. It
-          helps employees feel valued, engaged, and motivated every day.
+          WorCare is a digital wellbeing and workplace engagement platform being
+          developed to help organizations strengthen employee experience,
+          engagement, and overall workplace health through structured digital
+          journeys, meaningful content, and scalable service integration.
         </Typography>
-        <Typography
-          variant="subtitle2"
-          sx={{ color: "primary.light", mb: 1, fontWeight: 700 }}
-        >
-          Why It Matters
-        </Typography>
+
         <Typography sx={{ color: "text.secondary", lineHeight: 1.8 }}>
-          Happy, healthy employees drive focus, creativity, and commitment—key
-          ingredients for productivity and organizational success.
+          AI Pulse is supporting the evolution of WorCare from concept to
+          platform logic by shaping the product structure, experience flows, and
+          digital foundation required for long-term scalability.
         </Typography>
       </Card>
 
@@ -1016,7 +1022,7 @@ function WorcareContent() {
       </Typography>
       <TableContainer
         component={Paper}
-        sx={{ mb: 2, ...card, overflow: "auto" }}
+        sx={{ mb: 2, ...card, overflow: "hidden" }}
       >
         <Table size="small" stickyHeader>
           <TableHead>
@@ -2011,7 +2017,7 @@ function AIStudiesContent() {
 }
 
 export default function ProjectsSection() {
-  const [open, setOpen] = useState<string | null>("rashad");
+  const [open, setOpen] = useState<string | null>("");
 
   const toggle = useCallback((id: string) => {
     setOpen((prev) => {
@@ -2027,14 +2033,23 @@ export default function ProjectsSection() {
   }, []);
 
   return (
-    <SectionWrapper id="projects" label="PROJECTS & RESEARCH">
+    <SectionWrapper id="projects" label="Products & Initiatives">
       <Typography
         variant="h2"
-        sx={{ mb: 4, fontWeight: 700, fontSize: { xs: "1.75rem", sm: "2.125rem" } }}
+        sx={{
+          mb: 1,
+          fontWeight: 700,
+          fontSize: { xs: "1.75rem", sm: "2.125rem" },
+        }}
       >
-        Projects
+        Products & Initiatives
       </Typography>
-
+      <Typography variant="body2" sx={{ color: "text.secondary", mb: 3 }}>
+        AI Pulse is building a portfolio of internal and market-facing platforms
+        that enhance consulting delivery, improve decision-making, create
+        operational efficiencies, and open new digital growth opportunities for
+        Rubix.
+      </Typography>
       <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
         <ProjectAccordion
           id="rashad"
@@ -2076,19 +2091,27 @@ export default function ProjectsSection() {
         </ProjectAccordion>
         <Typography
           variant="h2"
-          sx={{ mt: 2, fontWeight: 700, fontSize: { xs: "1.75rem", sm: "2.125rem" } }}
+          sx={{
+            mt: 2,
+            fontWeight: 700,
+            fontSize: { xs: "1.75rem", sm: "2.125rem" },
+          }}
         >
-          Research
+          Research & Intelligence
+        </Typography>
+        <Typography variant="body2" sx={{ color: "text.secondary", mb: 3 }}>
+          AI Pulse continuously conducts product, AI, and market intelligence
+          research to support better design decisions, stronger product
+          strategy, and more informed innovation across Rubix.
         </Typography>
         <ProjectAccordion
           id="ai-studies"
           icon={<ScienceIcon sx={{ color: "primary.main", fontSize: 24 }} />}
-          title="AI Competitor Studies"
-          subtitle="How top consulting firms leverage artificial intelligence"
+          title="AI & Product Intelligence Studies"
+          subtitle="Ongoing research into emerging AI applications, competitive product models, consulting technology trends, and scalable digital business opportunities."
           chips={[
             {
-              label:
-                "Research — currently in the early stages, with initial data collection and analysis underway",
+              label: "Ongoing",
               bg: "#260312",
               color: "#FF6B9D",
             },

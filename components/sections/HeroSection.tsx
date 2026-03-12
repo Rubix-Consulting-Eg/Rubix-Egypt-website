@@ -449,45 +449,40 @@ export default function HeroSection() {
           animate="visible"
           transition={{ duration: 0.6 }}
         >
-          {/* Logo */}
-          <motion.div
-            variants={item}
-            style={{
-              marginBottom: 16,
-              display: "flex",
-              justifyContent: "center",
-            }}
-          >
-            <Box sx={{ px: { xs: 2, sm: 4 }, py: { xs: 1, sm: 2 }, borderRadius: 3 }}>
-              <Image
-                src="/logo.png"
-                alt="Rubix Egypt"
-                width={280}
-                height={90}
-                priority
-                style={{
-                  objectFit: "contain",
-                  width: "clamp(160px, 45vw, 280px)",
-                  height: "auto",
-                }}
-              />
-            </Box>
-          </motion.div>
-
           {/* Tagline heading */}
           <motion.div variants={item}>
             <Typography
-              variant="h2"
+              variant="h1"
               sx={{
-                fontSize: { xs: "1.5rem", sm: "2rem", md: "2.5rem" },
-                fontWeight: 700,
-                color: "text.secondary",
-                maxWidth: 600,
+                fontSize: { xs: "2rem", sm: "2.75rem", md: "3.25rem" },
+                fontWeight: 800,
+                background:
+                  "linear-gradient(135deg, #FFFFFF 0%, #FF6B9D 50%, #BE0E5B 100%)",
+                backgroundClip: "text",
+                WebkitBackgroundClip: "text",
+                color: "transparent",
+                maxWidth: 700,
                 mx: "auto",
-                mb: { xs: 1.5, sm: 2 },
+                mb: { xs: 1, sm: 1.5 },
+                letterSpacing: "-0.02em",
+                lineHeight: 1.9,
               }}
             >
-              Rubix Egypt
+              Rubix AI Pulse
+            </Typography>
+            <Typography
+              variant="h3"
+              sx={{
+                fontSize: { xs: "1rem", sm: "1.2rem", md: "1.3rem" },
+                fontWeight: 500,
+                color: "rgba(255,255,255,0.55)",
+                maxWidth: 600,
+                mx: "auto",
+                mb: { xs: 2, sm: 3 },
+                letterSpacing: "0.05em",
+              }}
+            >
+              AI Intelligence & Product Engineering Hub
             </Typography>
           </motion.div>
 
@@ -495,40 +490,38 @@ export default function HeroSection() {
           <motion.div variants={item}>
             <Typography
               sx={{
-                color: "text.secondary",
-                maxWidth: 720,
+                color: "rgba(255,255,255,0.65)",
+                maxWidth: 800,
                 mx: "auto",
                 mb: { xs: 1.5, sm: 2 },
-                lineHeight: 1.75,
-                fontSize: { xs: "0.875rem", sm: "1rem" },
+                lineHeight: 1.8,
+                fontSize: { xs: "0.875rem", sm: "0.95rem", md: "1.05rem" },
                 px: { xs: 1, sm: 0 },
               }}
             >
-              Rubix Egypt is a specialized technology and development team
-              operating within Rubix, focused on delivering advanced software
-              solutions and AI-powered consulting systems. Our engineers design
-              and build scalable web applications, mobile platforms, and
-              intelligent AI agents that enhance operational efficiency and
-              transform how consulting services are delivered.
+              Rubix AI Pulse is the specialized AI and product engineering hub
+              within Rubix, established to design, build, and scale intelligent
+              digital products, internal AI systems, and automation engines that
+              strengthen consulting delivery and unlock new business value.
             </Typography>
             <Typography
               sx={{
-                color: "text.secondary",
-                maxWidth: 720,
+                color: "rgba(255,255,255,0.5)",
+                maxWidth: 800,
                 mx: "auto",
                 mb: { xs: 3, sm: 4 },
-                lineHeight: 1.75,
-                fontSize: { xs: "0.875rem", sm: "1rem" },
+                lineHeight: 1.8,
+                fontSize: { xs: "0.8rem", sm: "0.9rem", md: "0.95rem" },
                 px: { xs: 1, sm: 0 },
                 display: { xs: "none", sm: "block" },
               }}
             >
-              By combining modern software engineering with artificial
-              intelligence, Rubix Egypt enables organizations to automate
-              processes, optimize decision-making, and accelerate digital
-              transformation. Our mission is to empower Rubix and its partners
-              with innovative, reliable, and scalable technology solutions that
-              drive sustainable growth and smarter business operations.
+              We combine AI engineering, product development, workflow
+              automation, and human-centered design to transform ideas into
+              deployable platforms. From internal consulting intelligence
+              systems to market-facing digital products, AI Pulse helps Rubix
+              move faster, deliver sharper outcomes, and build scalable
+              technology assets with real commercial and operational impact.
             </Typography>
           </motion.div>
 
@@ -561,7 +554,7 @@ export default function HeroSection() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
               >
-                Explore Our Projects
+                Explore Our Products
               </Button>
               <Button
                 component={motion.a}
@@ -583,7 +576,7 @@ export default function HeroSection() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
               >
-                Learn About Rubix Egypt
+                Learn About AI Pulse
               </Button>
             </Box>
           </motion.div>

@@ -13,78 +13,72 @@ const team = [
   {
     initials: "HD",
     name: "Mr. Hisham Darwish",
-    role: "GENERAL MANAGER",
-    desc: "Executive oversight, strategic direction, and milestone approval.",
+    role: "Executive Sponsor / Strategic Lead",
+    desc: "Provides strategic direction, business alignment, prioritization, and executive oversight across AI Pulse initiatives.",
     color: "#9c27b0",
     image: null as string | null,
   },
   {
     initials: "YB",
     name: "Youssef El-Badry",
-    role: "TECHNICAL TEAM LEAD & LEAD AI ARCHITECT",
-    desc: "Leads technical delivery, system architecture, and AI design.",
+    role: "Technical Lead & AI Architect",
+    desc: "Leads system architecture, technical delivery planning, and AI solution design across the hub.",
     color: "#9c27b0",
     image: null as string | null,
   },
   {
     initials: "AN",
     name: "Abdelrhman Nashaat",
-    role: "CO-LEAD – FLUTTER DEVELOPER",
-    desc: "Guides technical strategy, Flutter development, and advanced feature implementation.",
+    role: "Product Engineering Lead – Mobile",
+    desc: "Leads mobile product engineering and contributes to cross-platform solution design and implementation.",
     color: "#9c27b0",
     image: null as string | null,
   },
   {
     initials: "ME",
     name: "Mahmoud El-Naha",
-    role: "AI ENGINEER",
-    desc: "Develops AI pipelines, evaluates models, and optimizes outputs.",
-    tag: "AI",
+    role: "AI Engineer",
+    desc: "Develops AI pipelines, evaluates model performance, and improves output quality across intelligent systems.",
     color: "#2e7d32",
     image: null as string | null,
   },
   {
     initials: "AW",
     name: "Abdallah Wagih",
-    role: "AI ENGINEER",
-    desc: "Builds AI generation workflows and manages data pipelines.",
-    tag: "AI",
+    role: "AI Engineer",
+    desc: "Develops AI pipelines, evaluates model performance, and improves output quality across intelligent systems.",
     color: "#2e7d32",
     image: null as string | null,
   },
   {
     initials: "YK",
     name: "Youssef Khaled",
-    role: "BACKEND DEVELOPER",
-    desc: "Develops backend APIs, workflow logic, and system integration.",
-    tag: "Backend",
+    role: "Backend Engineer",
+    desc: "Develops backend architecture, APIs, integrations, and business logic for core platforms",
     color: "#ed6c02",
     image: null as string | null,
   },
   {
     initials: "AF",
-    name: "Abdelrhman Fathy",
-    role: "WEB DEVELOPER",
-    desc: "Builds web interfaces and integrates frontend with backend services.",
-    tag: "Frontend",
+    name: "Abdel-Rahman Fathy",
+    role: "Frontend Engineer",
+    desc: "Builds responsive interfaces and translates product requirements into scalable front-end experiences.",
     color: "#0288d1",
     image: null as string | null,
   },
   {
     initials: "ZA",
     name: "Zeyad Abdelazim",
-    role: "UI/UX TEAM LEADER",
-    desc: "Leads design strategy, user journeys, and UX standards.",
-    tag: "UI/UX Lead",
+    role: "UI/UX Lead",
+    desc: "Leads product experience design, user journeys, interface standards, and design direction.",
     color: "#BE0E5B",
     image: null as string | null,
   },
   {
     initials: "AK",
     name: "Aladdin Khaled",
-    role: "UI/UX DESIGNER",
-    desc: "Designs UI layouts, prototypes, and user interaction flows.",
-    tag: "UI/UX",
+    role: "UI/UX Designer",
+    desc: "Designs interfaces, prototypes, and interaction flows that improve usability and product clarity.",
     color: "#BE0E5B",
     image: null as string | null,
   },
@@ -131,7 +125,15 @@ function MemberCard({
         },
       }}
     >
-      <Box sx={{ p: 2.5, display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }}>
+      <Box
+        sx={{
+          p: 2.5,
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          textAlign: "center",
+        }}
+      >
         <Box
           sx={{
             width: 72,
@@ -157,12 +159,17 @@ function MemberCard({
               style={{ objectFit: "cover", width: "100%", height: "100%" }}
             />
           ) : (
-            <Typography sx={{ fontWeight: 700, color: "#fff", fontSize: "1.25rem" }}>
+            <Typography
+              sx={{ fontWeight: 700, color: "#fff", fontSize: "1.25rem" }}
+            >
               {initials}
             </Typography>
           )}
         </Box>
-        <Typography fontWeight={700} sx={{ fontSize: "1.05rem", color: "text.primary" }}>
+        <Typography
+          fontWeight={700}
+          sx={{ fontSize: "1.05rem", color: "text.primary" }}
+        >
           {name}
         </Typography>
         <Chip
@@ -184,7 +191,11 @@ function MemberCard({
         />
         <Typography
           variant="body2"
-          sx={{ color: "text.secondary", lineHeight: 1.65, fontSize: "0.875rem" }}
+          sx={{
+            color: "text.secondary",
+            lineHeight: 1.65,
+            fontSize: "0.875rem",
+          }}
         >
           {desc}
         </Typography>
@@ -210,10 +221,17 @@ export default function TeamSection() {
   return (
     <SectionWrapper id="team" label="THE PEOPLE BEHIND IT">
       <Box sx={{ textAlign: "center", mb: 5 }}>
-        <Typography variant="h2" sx={{ fontWeight: 700, mb: 1, fontSize: { xs: "1.75rem", sm: "2.125rem" } }}>
+        <Typography
+          variant="h2"
+          sx={{
+            fontWeight: 700,
+            mb: 1,
+            fontSize: { xs: "1.75rem", sm: "2.125rem" },
+          }}
+        >
           Rubix{" "}
           <Box component="span" sx={{ color: "primary.main" }}>
-            Egypt Team
+            AI Pulse Team
           </Box>
         </Typography>
         <Typography
@@ -224,8 +242,10 @@ export default function TeamSection() {
             lineHeight: 1.7,
           }}
         >
-          A focused team of engineers, AI specialists, designers, and
-          strategists — building the platforms that power Rubix&apos;s mission.
+          A focused multidisciplinary team of AI engineers, product developers,
+          designers, and technical leaders building the platforms, systems, and
+          intelligence capabilities that power Rubix&apos;s next generation of
+          delivery and growth.
         </Typography>
       </Box>
       <motion.div
@@ -243,7 +263,6 @@ export default function TeamSection() {
                   name={m.name}
                   role={m.role}
                   desc={m.desc}
-                  tag={m.tag}
                   color={m.color}
                   image={m.image}
                 />

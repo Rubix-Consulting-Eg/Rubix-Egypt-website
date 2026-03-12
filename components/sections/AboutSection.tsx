@@ -13,12 +13,11 @@ import SectionWrapper from "@/components/ui/SectionWrapper";
 import GlassCard from "@/components/ui/GlassCard";
 
 const capabilities = [
-  { icon: WebIcon, label: "Web platforms" },
-  { icon: PhoneAndroidIcon, label: "Mobile applications" },
-  { icon: SmartToyIcon, label: "AI agents" },
-  { icon: SettingsIcon, label: "Consulting automation systems" },
+  { icon: SmartToyIcon, label: "AI Products & Platforms" },
+  { icon: SettingsIcon, label: "Internal Intelligence Systems" },
+  { icon: WebIcon, label: "Productized Digital Solutions" },
+  { icon: PhoneAndroidIcon, label: " Web & Mobile Experiences" },
 ];
-
 
 const stagger = {
   visible: { transition: { staggerChildren: 0.1 } },
@@ -34,29 +33,59 @@ export default function AboutSection() {
     <SectionWrapper id="about" label="ABOUT US">
       <Grid container spacing={6} alignItems="center">
         <Grid item xs={12} md={7}>
-          <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
+          <motion.div
+            variants={stagger}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+          >
             <motion.div variants={fadeUp}>
-              <Typography variant="h2" sx={{ mb: 2, fontWeight: 700, fontSize: { xs: "1.75rem", sm: "2.125rem" } }}>
-                About Rubix Egypt
+              <Typography
+                variant="h2"
+                sx={{
+                  mb: 2,
+                  fontWeight: 700,
+                  fontSize: { xs: "1.75rem", sm: "2.125rem" },
+                }}
+              >
+                About Rubix AI Pulse
               </Typography>
             </motion.div>
             <motion.div variants={fadeUp}>
-              <Typography sx={{ color: "text.secondary", mb: 2, lineHeight: 1.8 }}>
-                Rubix Egypt is a specialized software engineering and AI development team operating within Rubix, focused on building intelligent digital solutions that enhance consulting services and drive technological innovation. Our mission is to develop advanced systems that automate consulting workflows, improve data-driven decision-making, and empower organizations through scalable technology.
+              <Typography
+                sx={{ color: "text.secondary", mb: 2, lineHeight: 1.8 }}
+              >
+                Rubix AI Pulse is Rubix’s dedicated AI intelligence and product
+                engineering hub, focused on building digital products, AI
+                agents, intelligent workflows, and scalable technology platforms
+                that support both internal performance and external market
+                growth. Its role is not limited to development execution; it
+                serves as a strategic engine that converts Rubix’s ideas,
+                methodologies, and opportunities into usable digital solutions.
               </Typography>
             </motion.div>
             <motion.div variants={fadeUp}>
-              <Typography sx={{ color: "text.secondary", mb: 3, lineHeight: 1.8 }}>
-                Our team consists of 8 engineers with expertise in software development, artificial intelligence, and system architecture. We are currently working on two active development projects, while also conducting AI research and competitive analysis to advance automation in consulting and business operations.
+              <Typography
+                sx={{ color: "text.secondary", mb: 3, lineHeight: 1.8 }}
+              >
+                Our team brings together product thinkers, AI engineers,
+                software developers, designers, and technical architects to
+                build systems that enhance consulting precision, improve
+                operational speed, and create new digitally enabled offerings.
+                AI Pulse supports Rubix by developing proprietary platforms,
+                accelerating internal efficiency, and enabling the
+                commercialization of technology-led solutions across sectors.
               </Typography>
             </motion.div>
-            <Typography sx={{ fontWeight: 600, mb: 1.5 }}>At Rubix Egypt, we design and develop:</Typography>
+            <Typography sx={{ fontWeight: 600, mb: 1.5 }}>
+              At AI Pulse, we design and develop:
+            </Typography>
             <Box component="ul" sx={{ m: 0, pl: 2.5 }}>
               {[
-                "Web platforms for scalable digital services",
-                "Mobile applications for seamless user experiences",
-                "AI agents that support intelligent automation",
-                "Consulting automation systems that streamline complex workflows",
+                "AI-powered products and platforms",
+                "Internal intelligence and automation systems",
+                "Web and mobile experiences",
+                "Productized solutions that support Rubix’s growth agenda",
               ].map((text) => (
                 <motion.li
                   key={text}
@@ -69,14 +98,20 @@ export default function AboutSection() {
                     color: "text.secondary",
                   }}
                 >
-                  <CheckCircleOutlineIcon sx={{ color: "primary.main", fontSize: 20 }} />
+                  <CheckCircleOutlineIcon
+                    sx={{ color: "primary.main", fontSize: 20 }}
+                  />
                   {text}
                 </motion.li>
               ))}
             </Box>
             <motion.div variants={fadeUp}>
-              <Typography sx={{ color: "text.secondary", mt: 2, lineHeight: 1.8 }}>
-                Our work focuses on transforming traditional consulting processes into scalable, AI-powered digital services, enabling Rubix and its partners to deliver smarter, faster, and more efficient solutions.
+              <Typography
+                sx={{ color: "text.secondary", mt: 2, lineHeight: 1.8 }}
+              >
+                Our focus is to turn knowledge, processes, and ideas into
+                scalable digital assets that improve how Rubix operates,
+                delivers, and grows.
               </Typography>
             </motion.div>
           </motion.div>
@@ -105,7 +140,10 @@ export default function AboutSection() {
                   }}
                 >
                   <Icon />
-                  <Typography variant="body2" sx={{ color: "text.secondary", textAlign: "center" }}>
+                  <Typography
+                    variant="body2"
+                    sx={{ color: "text.secondary", textAlign: "center" }}
+                  >
                     {label}
                   </Typography>
                 </Box>

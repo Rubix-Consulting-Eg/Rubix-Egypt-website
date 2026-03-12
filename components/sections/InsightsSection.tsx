@@ -16,7 +16,13 @@ import SmartToyIcon from "@mui/icons-material/SmartToy";
 import HandymanIcon from "@mui/icons-material/Handyman";
 import ScienceIcon from "@mui/icons-material/Science";
 
-function AnimatedNumber({ value, suffix = "" }: { value: number; suffix?: string }) {
+function AnimatedNumber({
+  value,
+  suffix = "",
+}: {
+  value: number;
+  suffix?: string;
+}) {
   const ref = useRef<HTMLSpanElement>(null);
   const isInView = useInView(ref, { once: true, amount: 0.5 });
   const motionValue = useMotionValue(0);
@@ -39,31 +45,31 @@ function AnimatedNumber({ value, suffix = "" }: { value: number; suffix?: string
 }
 
 const stats = [
-  { value: 8, label: "Team Members", sub: "Engineers" },
-  { value: 2, label: "Active Projects", sub: "Major Projects" },
-  { value: 3, label: "AI Research Studies", sub: "Global Consulting Firms" },
+  { value: 8, label: "Team Members" },
+  { value: 2, label: "Active Projects" },
+  { value: 8, label: "projects pipeline" },
 ];
 
 const focusItems = [
   {
-    icon: WebIcon,
-    title: "Web & Mobile Apps",
-    desc: "Seamless digital platforms for clients.",
-  },
-  {
     icon: SmartToyIcon,
-    title: "AI & Automation",
-    desc: "Intelligent systems that optimize workflows and decisions.",
+    title: "Automation & Intelligence",
+    desc: "Designing AI agents and smart workflows that improve speed, quality, and decision support.",
   },
   {
     icon: HandymanIcon,
-    title: "Consulting Tools",
-    desc: "Streamlined solutions for faster, smarter service delivery.",
+    title: "AI Products & Platforms",
+    desc: "Building proprietary digital products with clear business value and long-term scalability.",
+  },
+  {
+    icon: WebIcon,
+    title: "Product Engineering",
+    desc: "Developing robust web and mobile platforms with scalable architecture and strong user experience.",
   },
   {
     icon: ScienceIcon,
-    title: "Innovation & Research",
-    desc: "Advancing AI and technology for continuous improvement.",
+    title: "Applied Innovation",
+    desc: "Translating strategic ideas into testable, buildable, and commercially viable technology solutions.",
   },
 ];
 
@@ -97,7 +103,14 @@ export default function InsightsSection() {
           >
             INSIGHTS
           </Typography>
-          <Typography variant="h2" sx={{ mb: 5, fontWeight: 700, fontSize: { xs: "1.75rem", sm: "2.125rem" } }}>
+          <Typography
+            variant="h2"
+            sx={{
+              mb: 5,
+              fontWeight: 700,
+              fontSize: { xs: "1.75rem", sm: "2.125rem" },
+            }}
+          >
             At a Glance
           </Typography>
         </motion.div>
@@ -115,18 +128,35 @@ export default function InsightsSection() {
                   sx={{
                     p: 3,
                     height: "100%",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
                     borderRadius: 2,
                     border: "1px solid rgba(255,255,255,0.08)",
                     bgcolor: "rgba(255,255,255,0.04)",
-                    "&:hover": { borderColor: "rgba(190,14,91,0.5)", bgcolor: "rgba(255,255,255,0.06)" },
+                    "&:hover": {
+                      borderColor: "rgba(190,14,91,0.5)",
+                      bgcolor: "rgba(255,255,255,0.06)",
+                    },
                     transition: "all 0.25s",
                   }}
                 >
-                  <Typography sx={{ fontSize: "2.5rem", fontWeight: 700, color: "primary.main", lineHeight: 1.2 }}>
-                    <AnimatedNumber value={card.value} />
-                  </Typography>
-                  <Typography sx={{ fontWeight: 600, mt: 1 }}>{card.label}</Typography>
-                  <Typography variant="body2" sx={{ color: "text.secondary", mt: 0.5 }}>{card.sub}</Typography>
+                  <Box>
+                    <Typography
+                      sx={{
+                        fontSize: "2.5rem",
+                        fontWeight: 700,
+                        color: "primary.main",
+                        lineHeight: 1.2,
+                        textAlign: "center",
+                      }}
+                    >
+                      <AnimatedNumber value={card.value} />
+                    </Typography>
+                    <Typography sx={{ fontWeight: 600, mt: 1 }}>
+                      {card.label}
+                    </Typography>
+                  </Box>
                 </Box>
               </motion.div>
             </Grid>
@@ -138,11 +168,23 @@ export default function InsightsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
         >
-          <Typography variant="h4" sx={{ fontWeight: 700, mb: 2, color: "primary.light" }}>
-            Focus Areas — Rubix Egypt
+          <Typography
+            variant="h4"
+            sx={{ fontWeight: 700, mb: 2, color: "primary.light" }}
+          >
+            Focus Areas — Rubix AI Pulse
           </Typography>
-          <Typography sx={{ color: "text.secondary", mb: 4, lineHeight: 1.8, maxWidth: 720 }}>
-            Rubix Egypt develops scalable software and AI-powered solutions to transform consulting services. Our focus areas include:
+          <Typography
+            sx={{
+              color: "text.secondary",
+              mb: 4,
+              lineHeight: 1.8,
+              maxWidth: 720,
+            }}
+          >
+            Rubix AI Pulse develops intelligent digital products and AI-enabled
+            systems that strengthen Rubix internally while creating scalable
+            offerings for the market. Our focus areas include:
           </Typography>
           <Grid container spacing={3} sx={{ mb: 3 }}>
             {focusItems.map((item, i) => (
@@ -156,23 +198,53 @@ export default function InsightsSection() {
                     borderRadius: 2,
                     border: "1px solid rgba(255,255,255,0.08)",
                     bgcolor: "rgba(255,255,255,0.03)",
-                    "&:hover": { borderColor: "rgba(255,255,255,0.12)", bgcolor: "rgba(255,255,255,0.05)" },
+                    "&:hover": {
+                      borderColor: "rgba(255,255,255,0.12)",
+                      bgcolor: "rgba(255,255,255,0.05)",
+                    },
                     transition: "all 0.2s",
                   }}
                 >
-                  <Box sx={{ width: 48, height: 48, borderRadius: "12px", bgcolor: "primary.900", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                  <Box
+                    sx={{
+                      width: 48,
+                      height: 48,
+                      borderRadius: "12px",
+                      bgcolor: "primary.900",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      flexShrink: 0,
+                    }}
+                  >
                     <item.icon sx={{ color: "primary.main", fontSize: 24 }} />
                   </Box>
                   <Box>
-                    <Typography variant="subtitle1" fontWeight={700} sx={{ mb: 0.5 }}>{item.title}</Typography>
-                    <Typography variant="body2" color="text.secondary" sx={{ lineHeight: 1.6 }}>{item.desc}</Typography>
+                    <Typography
+                      variant="subtitle1"
+                      fontWeight={700}
+                      sx={{ mb: 0.5 }}
+                    >
+                      {item.title}
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="text.secondary"
+                      sx={{ lineHeight: 1.6 }}
+                    >
+                      {item.desc}
+                    </Typography>
                   </Box>
                 </Box>
               </Grid>
             ))}
           </Grid>
-          <Typography sx={{ color: "text.secondary", lineHeight: 1.8, maxWidth: 800 }}>
-            We combine software engineering and AI to help Rubix and partners accelerate digital transformation and deliver smarter, efficient solutions.
+          <Typography
+            sx={{ color: "text.secondary", lineHeight: 1.8, maxWidth: 800 }}
+          >
+            We connect strategy, engineering, and AI to help Rubix build sharper
+            capabilities, stronger digital assets, and more scalable service
+            models.
           </Typography>
         </motion.div>
       </Box>
