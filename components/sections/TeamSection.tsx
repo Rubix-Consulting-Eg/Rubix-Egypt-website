@@ -19,7 +19,7 @@ import "swiper/css/pagination";
 const team = [
   {
     initials: "HD",
-    name: "Mr. Hisham Darwish",
+    name: "Hisham Darwish",
     role: "Executive Sponsor / Strategic Lead",
     desc: "Provides strategic direction, business alignment, prioritization, and executive oversight across AI Pulse initiatives.",
     image: "/Mr Hesham.jpeg",
