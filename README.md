@@ -76,4 +76,4 @@ rubix-egypt/
 - **Cards:** Glassmorphism (blur, semi-transparent), 8px border-radius
 - **Typography:** Plus Jakarta Sans, H1 64px/700, H2 40px/700
 
-© 2025 Rubix Egypt. Part of Rubix.
+© 2026 Rubix AI Pulse

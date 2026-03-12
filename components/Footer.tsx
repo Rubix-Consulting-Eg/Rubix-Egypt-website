@@ -147,7 +147,7 @@ export default function Footer() {
               fontSize: "0.8rem",
             }}
           >
-            © {new Date().getFullYear()} Rubix Egypt. Part of Rubix.
+            © {new Date().getFullYear()} Rubix AI Pulse.
           </Typography>
         </Box>
       </Container>
