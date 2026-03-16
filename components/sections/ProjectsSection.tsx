@@ -484,24 +484,24 @@ function RashadContent() {
             desc: "Supports the creation of structured, branded, and high-quality response documents.",
           },
           {
+            icon: DescriptionIcon,
+            title: "5. Professional Profile Engine",
+            desc: "Converts CVs into structured and visually organized professional summaries.",
+          },
+          {
             icon: SlideshowIcon,
-            title: "5. Presentation Agent",
+            title: "6. Presentation Agent",
             desc: "Transforms approved content into polished client-facing presentations.",
           },
           {
             icon: RequestQuoteIcon,
-            title: "6. Delivery Support Agents",
+            title: "7. Delivery Support Agents",
             desc: "Assists consultants during mobilization and project execution with guided intelligence and task acceleration.",
           },
           {
             icon: SummarizeIcon,
-            title: "7. Learning Engine",
+            title: "8. Learning Engine",
             desc: "Captures patterns, feedback, and reusable assets to improve future output quality over time.",
-          },
-          {
-            icon: DescriptionIcon,
-            title: "8. Professional Profile Engine",
-            desc: "Converts CVs into structured and visually organized professional summaries.",
           },
         ].map((m) => (
           <Grid item xs={12} sm={6} key={m.title}>
