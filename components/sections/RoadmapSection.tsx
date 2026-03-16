@@ -75,18 +75,6 @@ const phases: Phase[] = [
           "Complete structured build and readiness progression for selective healthcare market entry",
         months: [2, 3, 4, 5],
       },
-      {
-        product: "Rashad Consulting Agents",
-        objective:
-          "Define requirements and begin development of an AI-enabled consulting support layer",
-        months: [2, 3, 4, 5],
-      },
-      {
-        product: "Rubix Excavation Office – USA",
-        objective:
-          "Activate sourcing channels, ecosystem relationships, and opportunity scouting in the US market",
-        months: [2, 3, 4, 5],
-      },
     ],
   },
   {
@@ -108,12 +96,6 @@ const phases: Phase[] = [
           "Build and launch a basic digital platform in Q2 to manage startup applications, incubation, and tracking",
         months: [3, 4, 5, 6],
       },
-      {
-        product: "US Ecosystem Roadshow",
-        objective:
-          "Prepare market-entry and ecosystem outreach to create a sustainable pipeline of startup applications",
-        months: [3, 4, 5, 6],
-      },
     ],
   },
 
@@ -128,12 +110,6 @@ const phases: Phase[] = [
         product: "Sulhafa",
         objective:
           "Maintain stability, close development gaps, and support controlled regional growth",
-        months: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-      },
-      {
-        product: "USA-Sourced Opportunities",
-        objective:
-          "Screen, qualify, and selectively convert sourced MVPs or services into partnership or commercialization candidates",
         months: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
       },
     ],

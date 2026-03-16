@@ -47,7 +47,7 @@ function AnimatedNumber({
 const stats = [
   { value: 8, label: "Team Members" },
   { value: 2, label: "Active Projects" },
-  { value: 8, label: "Projects Pipeline" },
+  { value: 5, label: "Projects Pipeline" },
 ];
 
 const focusItems = [

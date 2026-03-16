@@ -32,6 +32,9 @@ const projectLinks = [
   { label: "Rashad Project", href: "#rashad" },
   { label: "Worcare Project", href: "#worcare" },
 ];
+const researchLinks = [
+  { label: "AI & Product Intelligence Studies", href: "#ai-studies" },
+];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -39,7 +42,11 @@ export default function Navbar() {
   const [projectsAnchor, setProjectsAnchor] = useState<null | HTMLElement>(
     null,
   );
+  const [researchAnchor, setResearchAnchor] = useState<null | HTMLElement>(
+    null,
+  );
   const [projectsExpanded, setProjectsExpanded] = useState(false);
+  const [researchExpanded, setResearchExpanded] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 40);
@@ -139,6 +146,47 @@ export default function Navbar() {
                 </MenuItem>
               ))}
             </Menu>
+            <Button
+              onClick={(e) => setResearchAnchor(e.currentTarget)}
+              endIcon={<KeyboardArrowDownIcon />}
+              sx={{
+                color: "text.secondary",
+                "&:hover": { color: "primary.main" },
+              }}
+            >
+              Research
+            </Button>
+            <Menu
+              anchorEl={researchAnchor}
+              open={Boolean(researchAnchor)}
+              onClose={() => setResearchAnchor(null)}
+              anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+              transformOrigin={{ vertical: "top", horizontal: "center" }}
+              PaperProps={{
+                sx: {
+                  mt: 1.5,
+                  bgcolor: "background.paper",
+                  border: "1px solid rgba(255,255,255,0.08)",
+                  borderRadius: 2,
+                  minWidth: 200,
+                },
+              }}
+            >
+              {researchLinks.map((link) => (
+                <MenuItem
+                  key={link.href}
+                  component="a"
+                  href={link.href}
+                  onClick={() => setResearchAnchor(null)}
+                  sx={{
+                    py: 1.5,
+                    "&:hover": { bgcolor: "rgba(255,255,255,0.06)" },
+                  }}
+                >
+                  {link.label}
+                </MenuItem>
+              ))}
+            </Menu>
             {navLinks.slice(1).map((link) => (
               <Button
                 key={link.href}
@@ -209,6 +257,33 @@ export default function Navbar() {
                     onClick={() => {
                       setMobileOpen(false);
                       setProjectsExpanded(false);
+                    }}
+                    sx={{ py: 1.5, pl: 4 }}
+                  >
+                    <ListItemText primary={link.label} />
+                  </ListItemButton>
+                </ListItem>
+              ))}
+            </List>
+          </Collapse>
+          <ListItem disablePadding>
+            <ListItemButton
+              onClick={() => setResearchExpanded(!researchExpanded)}
+              sx={{ py: 2 }}
+            >
+              <ListItemText primary="Research" />
+              {researchExpanded ? <ExpandLess /> : <ExpandMore />}
+            </ListItemButton>
+          </ListItem>
+          <Collapse in={researchExpanded} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              {researchLinks.map((link) => (
+                <ListItem key={link.href} disablePadding>
+                  <ListItemButton
+                    href={link.href}
+                    onClick={() => {
+                      setMobileOpen(false);
+                      setResearchExpanded(false);
                     }}
                     sx={{ py: 1.5, pl: 4 }}
                   >
