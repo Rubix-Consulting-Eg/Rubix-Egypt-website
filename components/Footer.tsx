@@ -19,7 +19,6 @@ const columns = [
       { label: "Roadmap", href: "#roadmap" },
       { label: "Projects", href: "#projects" },
       { label: "Team", href: "#team" },
-      { label: "Vision", href: "#vision" },
       { label: "Location", href: "#location" },
     ],
   },

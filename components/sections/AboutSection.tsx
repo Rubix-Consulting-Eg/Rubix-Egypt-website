@@ -114,6 +114,43 @@ export default function AboutSection() {
                 delivers, and grows.
               </Typography>
             </motion.div>
+
+            {/* Future Vision – integrated into About */}
+            <motion.div variants={fadeUp}>
+              <Typography
+                variant="h3"
+                sx={{
+                  mt: 4,
+                  mb: 2,
+                  fontWeight: 700,
+                  fontSize: { xs: "1.35rem", sm: "1.5rem" },
+                  background:
+                    "linear-gradient(135deg, #BE0E5B, #FF6B9D)",
+                  backgroundClip: "text",
+                  WebkitBackgroundClip: "text",
+                  color: "transparent",
+                }}
+              >
+                Future Vision
+              </Typography>
+              <Typography
+                sx={{ color: "text.secondary", mb: 2, lineHeight: 1.8 }}
+              >
+                Rubix AI Pulse aims to become the intelligence and product
+                engineering backbone behind Rubix&apos;s next wave of growth. Our
+                ambition is to build the internal systems, digital products, and
+                AI-enabled capabilities that make Rubix faster, smarter, and
+                more scalable.
+              </Typography>
+              <Typography
+                sx={{ color: "text.secondary", lineHeight: 1.8 }}
+              >
+                Over time, AI Pulse will continue transforming strategic ideas
+                into deployable platforms, strengthening consulting performance,
+                and creating new technology-led value propositions that position
+                Rubix as a truly AI-native business.
+              </Typography>
+            </motion.div>
           </motion.div>
         </Grid>
         <Grid item xs={12} md={5}>
