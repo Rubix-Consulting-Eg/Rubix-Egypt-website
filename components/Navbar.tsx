@@ -21,34 +21,59 @@ import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
-const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Roadmap", href: "#roadmap" },
+const projectLinks = [
+  { label: "Rashad Project", href: "#rashad" },
+  { label: "Worcare Project", href: "#worcare" },
+  { label: "DiagnifyAI", href: "#diagnify-ai" },
+  { label: "Rashad Consulting Agents", href: "#rashad-consulting-agents" },
+  { label: "Rubix Excavation Office – USA", href: "#rubix-excavation-usa" },
+  { label: "SparkThon Operating Model", href: "#sparkthon-operating-model" },
+  { label: "SparkThon Platform", href: "#sparkthon-platform" },
+  { label: "US Ecosystem Roadshow", href: "#us-ecosystem-roadshow" },
+  { label: "Sulhafa", href: "#sulhafa" },
+];
+
+const rdLinks = [
+  { label: "Rashad Project", href: "#rd-rashad" },
+  { label: "Worcare Project", href: "#rd-worcare" },
+  { label: "DiagnifyAI", href: "#rd-diagnify" },
+  { label: "SparkThon Platform", href: "#rd-sparkthon" },
+  { label: "Sulhafa", href: "#rd-sulhafa" },
+];
+
+const trailingLinks = [
   { label: "Team", href: "#team" },
   { label: "Location", href: "#location" },
 ];
 
-const projectLinks = [
-  { label: "Rashad", href: "#rashad" },
-  { label: "Worcare", href: "#worcare" },
-  { label: "DiagnifyAI", href: "#diagnify-ai" },
-  { label: "SparkThon Platform", href: "#sparkthon-platform" },
-  { label: "Sulhafa", href: "#sulhafa" },
-];
+const btnSx = {
+  color: "text.secondary",
+  "&:hover": { color: "primary.main" },
+};
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [projectsAnchor, setProjectsAnchor] = useState<null | HTMLElement>(
-    null,
-  );
+  const [projectsAnchor, setProjectsAnchor] = useState<null | HTMLElement>(null);
+  const [rdAnchor, setRdAnchor] = useState<null | HTMLElement>(null);
   const [projectsExpanded, setProjectsExpanded] = useState(false);
+  const [rdExpanded, setRdExpanded] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const menuPaperProps = {
+    sx: {
+      mt: 1.5,
+      bgcolor: "background.paper",
+      border: "1px solid rgba(255,255,255,0.08)",
+      borderRadius: 2,
+      minWidth: 200,
+    },
+  };
 
   return (
     <>
@@ -84,6 +109,7 @@ export default function Navbar() {
             />
           </Box>
 
+          {/* Desktop nav */}
           <Box
             sx={{
               display: { xs: "none", md: "flex" },
@@ -91,23 +117,50 @@ export default function Navbar() {
               alignItems: "center",
             }}
           >
-            <Button
-              href="#about"
-              color="inherit"
-              sx={{
-                color: "text.secondary",
-                "&:hover": { color: "primary.main" },
-              }}
-            >
+            <Button href="#about" color="inherit" sx={btnSx}>
               About
             </Button>
+            <Button href="#roadmap" color="inherit" sx={btnSx}>
+              Roadmap
+            </Button>
+
+            {/* R&D dropdown */}
+            <Button
+              onClick={(e) => setRdAnchor(e.currentTarget)}
+              endIcon={<KeyboardArrowDownIcon />}
+              sx={btnSx}
+            >
+              R&D
+            </Button>
+            <Menu
+              anchorEl={rdAnchor}
+              open={Boolean(rdAnchor)}
+              onClose={() => setRdAnchor(null)}
+              anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+              transformOrigin={{ vertical: "top", horizontal: "center" }}
+              PaperProps={menuPaperProps}
+            >
+              {rdLinks.map((link) => (
+                <MenuItem
+                  key={link.href}
+                  component="a"
+                  href={link.href}
+                  onClick={() => setRdAnchor(null)}
+                  sx={{
+                    py: 1.5,
+                    "&:hover": { bgcolor: "rgba(255,255,255,0.06)" },
+                  }}
+                >
+                  {link.label}
+                </MenuItem>
+              ))}
+            </Menu>
+
+            {/* Projects dropdown */}
             <Button
               onClick={(e) => setProjectsAnchor(e.currentTarget)}
               endIcon={<KeyboardArrowDownIcon />}
-              sx={{
-                color: "text.secondary",
-                "&:hover": { color: "primary.main" },
-              }}
+              sx={btnSx}
             >
               Projects
             </Button>
@@ -117,15 +170,7 @@ export default function Navbar() {
               onClose={() => setProjectsAnchor(null)}
               anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
               transformOrigin={{ vertical: "top", horizontal: "center" }}
-              PaperProps={{
-                sx: {
-                  mt: 1.5,
-                  bgcolor: "background.paper",
-                  border: "1px solid rgba(255,255,255,0.08)",
-                  borderRadius: 2,
-                  minWidth: 200,
-                },
-              }}
+              PaperProps={menuPaperProps}
             >
               {projectLinks.map((link) => (
                 <MenuItem
@@ -142,15 +187,13 @@ export default function Navbar() {
                 </MenuItem>
               ))}
             </Menu>
-            {navLinks.slice(1).map((link) => (
+
+            {trailingLinks.map((link) => (
               <Button
                 key={link.href}
                 href={link.href}
                 color="inherit"
-                sx={{
-                  color: "text.secondary",
-                  "&:hover": { color: "primary.main" },
-                }}
+                sx={btnSx}
               >
                 {link.label}
               </Button>
@@ -167,6 +210,7 @@ export default function Navbar() {
         </Toolbar>
       </AppBar>
 
+      {/* Mobile drawer */}
       <Drawer
         anchor="right"
         open={mobileOpen}
@@ -196,6 +240,46 @@ export default function Navbar() {
           </ListItem>
           <ListItem disablePadding>
             <ListItemButton
+              href="#roadmap"
+              onClick={() => setMobileOpen(false)}
+              sx={{ py: 2 }}
+            >
+              <ListItemText primary="Roadmap" />
+            </ListItemButton>
+          </ListItem>
+
+          {/* R&D expandable */}
+          <ListItem disablePadding>
+            <ListItemButton
+              onClick={() => setRdExpanded(!rdExpanded)}
+              sx={{ py: 2 }}
+            >
+              <ListItemText primary="R&D" />
+              {rdExpanded ? <ExpandLess /> : <ExpandMore />}
+            </ListItemButton>
+          </ListItem>
+          <Collapse in={rdExpanded} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              {rdLinks.map((link) => (
+                <ListItem key={link.href} disablePadding>
+                  <ListItemButton
+                    href={link.href}
+                    onClick={() => {
+                      setMobileOpen(false);
+                      setRdExpanded(false);
+                    }}
+                    sx={{ py: 1.5, pl: 4 }}
+                  >
+                    <ListItemText primary={link.label} />
+                  </ListItemButton>
+                </ListItem>
+              ))}
+            </List>
+          </Collapse>
+
+          {/* Projects expandable */}
+          <ListItem disablePadding>
+            <ListItemButton
               onClick={() => setProjectsExpanded(!projectsExpanded)}
               sx={{ py: 2 }}
             >
@@ -221,7 +305,8 @@ export default function Navbar() {
               ))}
             </List>
           </Collapse>
-          {navLinks.slice(1).map((link) => (
+
+          {trailingLinks.map((link) => (
             <ListItem key={link.href} disablePadding>
               <ListItemButton
                 href={link.href}
@@ -249,7 +334,6 @@ export default function Navbar() {
           </ListItem>
         </List>
       </Drawer>
-      <></>
     </>
   );
 }
