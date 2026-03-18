@@ -22,16 +22,16 @@ import ExpandMore from "@mui/icons-material/ExpandMore";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 const projectLinks = [
-  { label: "Rashad Project", href: "#rashad" },
-  { label: "Worcare Project", href: "#worcare" },
+  { label: "Rashad", href: "#rashad" },
+  { label: "Worcare", href: "#worcare" },
   { label: "DiagnifyAI", href: "#diagnify-ai" },
   { label: "SparkThon Platform", href: "#sparkthon-platform" },
   { label: "Sulhafa", href: "#sulhafa" },
 ];
 
 const rdLinks = [
-  { label: "Rashad Project", href: "#rd-rashad" },
-  { label: "Worcare Project", href: "#rd-worcare" },
+  { label: "Rashad", href: "#rd-rashad" },
+  { label: "Worcare", href: "#rd-worcare" },
   { label: "DiagnifyAI", href: "#rd-diagnify" },
   { label: "SparkThon Platform", href: "#rd-sparkthon" },
   { label: "Sulhafa", href: "#rd-sulhafa" },
