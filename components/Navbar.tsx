@@ -25,11 +25,7 @@ const projectLinks = [
   { label: "Rashad Project", href: "#rashad" },
   { label: "Worcare Project", href: "#worcare" },
   { label: "DiagnifyAI", href: "#diagnify-ai" },
-  { label: "Rashad Consulting Agents", href: "#rashad-consulting-agents" },
-  { label: "Rubix Excavation Office – USA", href: "#rubix-excavation-usa" },
-  { label: "SparkThon Operating Model", href: "#sparkthon-operating-model" },
   { label: "SparkThon Platform", href: "#sparkthon-platform" },
-  { label: "US Ecosystem Roadshow", href: "#us-ecosystem-roadshow" },
   { label: "Sulhafa", href: "#sulhafa" },
 ];
 
