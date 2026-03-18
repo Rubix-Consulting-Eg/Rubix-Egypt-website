@@ -57,7 +57,7 @@ export default function AboutSection() {
               >
                 <Box
                   component="img"
-                  src="/about-rubix.png"
+                  src="/about-rubix.jpeg"
                   alt="Rubix AI Pulse overview"
                   sx={{
                     width: "100%",
@@ -76,12 +76,13 @@ export default function AboutSection() {
                 sx={{ color: "text.secondary", mb: 2, lineHeight: 1.8 }}
               >
                 Rubix AI Pulse is Rubix&apos;s dedicated AI intelligence and
-                product engineering hub, focused on building digital products, AI
-                agents, intelligent workflows, and scalable technology platforms
-                that support both internal performance and external market
-                growth. Its role is not limited to development execution; it
-                serves as a strategic engine that converts Rubix&apos;s ideas,
-                methodologies, and opportunities into usable digital solutions.
+                product engineering hub, focused on building digital products,
+                AI agents, intelligent workflows, and scalable technology
+                platforms that support both internal performance and external
+                market growth. Its role is not limited to development execution;
+                it serves as a strategic engine that converts Rubix&apos;s
+                ideas, methodologies, and opportunities into usable digital
+                solutions.
               </Typography>
             </motion.div>
 
@@ -123,7 +124,11 @@ export default function AboutSection() {
                     }}
                   >
                     <CheckCircleOutlineIcon
-                      sx={{ color: "primary.main", fontSize: 20, flexShrink: 0 }}
+                      sx={{
+                        color: "primary.main",
+                        fontSize: 20,
+                        flexShrink: 0,
+                      }}
                     />
                     <Typography
                       variant="body1"
@@ -184,10 +189,10 @@ export default function AboutSection() {
               scalable.
             </Typography>
             <Typography sx={{ color: "text.secondary", lineHeight: 1.8 }}>
-              Over time, AI Pulse will continue transforming strategic ideas into
-              deployable platforms, strengthening consulting performance, and
-              creating new technology-led value propositions that position Rubix
-              as a truly AI-native business.
+              Over time, AI Pulse will continue transforming strategic ideas
+              into deployable platforms, strengthening consulting performance,
+              and creating new technology-led value propositions that position
+              Rubix as a truly AI-native business.
             </Typography>
           </Box>
         </motion.div>
