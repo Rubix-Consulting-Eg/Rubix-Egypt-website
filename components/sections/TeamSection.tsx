@@ -32,7 +32,7 @@ const team = [
   },
   {
     initials: "ME",
-    name: "Mahmoud El-Naha",
+    name: "Mahmoud El-Nahal",
     role: "AI Engineer",
     desc: "Develops AI pipelines, evaluates model performance, and improves output quality across intelligent systems.",
     image: "/mahmoud.jpeg",
