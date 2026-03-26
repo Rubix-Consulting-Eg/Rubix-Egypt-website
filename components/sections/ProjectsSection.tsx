@@ -1004,7 +1004,7 @@ function RashadContent() {
           </Grid>
         </Grid>
 
-        {/* ── PHASE 2 ── */}
+        {/* ── PHASE 2A — All Teams ── */}
         <Grid item xs={12}>
           <Card sx={{ ...card, p: 3 }}>
             <Box
@@ -1027,7 +1027,7 @@ function RashadContent() {
                 }}
               />
               <Typography variant="subtitle1" fontWeight={700}>
-                Input Page, Summary Page, AI Agents
+                Input Page, Summary Page &amp; UI Integration
               </Typography>
               <Chip
                 label="In Progress"
@@ -1048,9 +1048,9 @@ function RashadContent() {
                 component="span"
                 sx={{ fontWeight: 600, color: "primary.light" }}
               >
-                Estimated duration:
+                Deadline:
               </Box>{" "}
-              2 weeks - 3 weeks
+              April 6, 2026
             </Typography>
 
             <Typography
@@ -1076,17 +1076,6 @@ function RashadContent() {
               refine AI-generated outputs before proceeding to proposal
               generation.
             </Typography>
-
-            <Box sx={{ mb: 3 }}>
-              <Typography
-                variant="body2"
-                fontWeight={600}
-                sx={{ mb: 1, color: "text.secondary" }}
-              >
-                Overall Progress
-              </Typography>
-              <AnimatedProgressBar value={27} status="In Progress" />
-            </Box>
 
             <Box sx={{ mb: 3 }}>
               <Typography
@@ -1193,7 +1182,7 @@ function RashadContent() {
               Team Progress
             </Typography>
             <Grid container spacing={2}>
-              <Grid item xs={12} sm={6} md={3}>
+              <Grid item xs={12} sm={4}>
                 <Typography
                   variant="caption"
                   sx={{
@@ -1210,7 +1199,7 @@ function RashadContent() {
                 </Typography>
                 <AnimatedProgressBar value={80} status="In Progress" />
               </Grid>
-              <Grid item xs={12} sm={6} md={3}>
+              <Grid item xs={12} sm={4}>
                 <Typography
                   variant="caption"
                   sx={{
@@ -1227,7 +1216,7 @@ function RashadContent() {
                 </Typography>
                 <AnimatedProgressBar value={0} status="Not Started" />
               </Grid>
-              <Grid item xs={12} sm={6} md={3}>
+              <Grid item xs={12} sm={4}>
                 <Typography
                   variant="caption"
                   sx={{
@@ -1244,32 +1233,110 @@ function RashadContent() {
                 </Typography>
                 <AnimatedProgressBar value={0} status="Not Started" />
               </Grid>
-              <Grid item xs={12} sm={6} md={3}>
-                <Typography
-                  variant="caption"
-                  sx={{
-                    color: "text.secondary",
-                    fontWeight: 600,
-                    display: "block",
-                    mb: 1,
-                  }}
-                >
-                  AI Team
-                </Typography>
-                <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5 }}>
-                  <Box>
-                    <Typography variant="body2" sx={{ mb: 0.5 }}>
-                      Proposal Agent
-                    </Typography>
-                    <AnimatedProgressBar value={30} status="In Progress" />
+            </Grid>
+          </Card>
+        </Grid>
+
+        {/* ── PHASE 2B — AI Team ── */}
+        <Grid item xs={12}>
+          <Card sx={{ ...card, p: 3 }}>
+            <Box
+              sx={{
+                display: "flex",
+                flexWrap: "wrap",
+                alignItems: "center",
+                gap: 1.5,
+                mb: 1.5,
+              }}
+            >
+              <Chip
+                label="Phase 2 — AI"
+                size="small"
+                sx={{
+                  bgcolor: "rgba(190,14,91,0.2)",
+                  color: "primary.light",
+                  fontWeight: 700,
+                  fontSize: "0.72rem",
+                }}
+              />
+              <Typography variant="subtitle1" fontWeight={700}>
+                AI Agents Development
+              </Typography>
+              <Chip
+                label="In Progress"
+                size="small"
+                sx={{
+                  bgcolor: "rgba(255,193,7,0.2)",
+                  color: "#ffc107",
+                  fontWeight: 600,
+                }}
+              />
+            </Box>
+
+            <Typography
+              variant="body2"
+              sx={{ color: "text.secondary", fontSize: "0.82rem", mb: 2 }}
+            >
+              <Box
+                component="span"
+                sx={{ fontWeight: 600, color: "primary.light" }}
+              >
+                Deadline:
+              </Box>{" "}
+              April 16, 2026
+            </Typography>
+
+            <Typography
+              variant="body2"
+              sx={{
+                color: "primary.light",
+                fontStyle: "italic",
+                mb: 3,
+                fontSize: "0.82rem",
+              }}
+            >
+              Intelligence Layer – Building the agents that power proposal
+              generation and presentation
+            </Typography>
+
+            <Typography
+              variant="subtitle2"
+              fontWeight={700}
+              sx={{ mb: 2, color: "primary.light" }}
+            >
+              Team Progress
+            </Typography>
+            <Grid container spacing={2}>
+              <Grid item xs={12} sm={6}>
+                <Card sx={{ ...innerCard, p: 2 }}>
+                  <Typography
+                    variant="caption"
+                    sx={{
+                      color: "primary.main",
+                      fontWeight: 700,
+                      display: "block",
+                      mb: 1,
+                      textTransform: "uppercase",
+                      letterSpacing: 0.8,
+                    }}
+                  >
+                    AI Team
+                  </Typography>
+                  <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5 }}>
+                    <Box>
+                      <Typography variant="body2" sx={{ mb: 0.5 }}>
+                        Proposal Agent
+                      </Typography>
+                      <AnimatedProgressBar value={30} status="In Progress" />
+                    </Box>
+                    <Box>
+                      <Typography variant="body2" sx={{ mb: 0.5 }}>
+                        Presentation Agent
+                      </Typography>
+                      <AnimatedProgressBar value={30} status="In Progress" />
+                    </Box>
                   </Box>
-                  <Box>
-                    <Typography variant="body2" sx={{ mb: 0.5 }}>
-                      Presentation Agent
-                    </Typography>
-                    <AnimatedProgressBar value={30} status="In Progress" />
-                  </Box>
-                </Box>
+                </Card>
               </Grid>
             </Grid>
           </Card>
