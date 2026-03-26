@@ -656,11 +656,11 @@ function RashadContent() {
                 Document Intelligence &amp; Analysis
               </Typography>
               <Chip
-                label="In Progress"
+                label="Delivered"
                 size="small"
                 sx={{
-                  bgcolor: "rgba(255,193,7,0.2)",
-                  color: "#ffc107",
+                  bgcolor: "rgba(76,175,80,0.2)",
+                  color: "#4caf50",
                   fontWeight: 600,
                 }}
               />
@@ -673,7 +673,7 @@ function RashadContent() {
                 component="span"
                 sx={{ fontWeight: 600, color: "primary.light" }}
               >
-                Estimated completion:
+                Delivered:
               </Box>{" "}
               19/3
             </Typography>
@@ -710,7 +710,7 @@ function RashadContent() {
               >
                 Overall Progress
               </Typography>
-              <AnimatedProgressBar value={75} status="In Progress" />
+              <AnimatedProgressBar value={100} status="Completed" />
             </Box>
 
             <Typography
@@ -845,7 +845,7 @@ function RashadContent() {
                 <Typography variant="body2" sx={{ mb: 0.5 }}>
                   Phase 1 Implementation
                 </Typography>
-                <AnimatedProgressBar value={50} status="In Progress" />
+                <AnimatedProgressBar value={100} status="Completed" />
               </Grid>
               <Grid item xs={12} sm={6} md={3}>
                 <Typography
@@ -862,7 +862,7 @@ function RashadContent() {
                 <Typography variant="body2" sx={{ mb: 0.5 }}>
                   Auth APIs
                 </Typography>
-                <AnimatedProgressBar value={50} status="In Progress" />
+                <AnimatedProgressBar value={100} status="Completed" />
               </Grid>
               <Grid item xs={12} sm={6} md={3}>
                 <Typography
@@ -1006,7 +1006,7 @@ function RashadContent() {
 
         {/* ── PHASE 2 ── */}
         <Grid item xs={12}>
-          <Card sx={{ ...card, p: 3, opacity: 0.7 }}>
+          <Card sx={{ ...card, p: 3 }}>
             <Box
               sx={{
                 display: "flex",
@@ -1030,11 +1030,11 @@ function RashadContent() {
                 Input Page, Summary Page, AI Agents
               </Typography>
               <Chip
-                label="Not Started"
+                label="In Progress"
                 size="small"
                 sx={{
-                  bgcolor: "rgba(255,255,255,0.08)",
-                  color: "text.secondary",
+                  bgcolor: "rgba(255,193,7,0.2)",
+                  color: "#ffc107",
                   fontWeight: 600,
                 }}
               />
@@ -1085,7 +1085,7 @@ function RashadContent() {
               >
                 Overall Progress
               </Typography>
-              <AnimatedProgressBar value={0} status="Not Started" />
+              <AnimatedProgressBar value={27} status="In Progress" />
             </Box>
 
             <Box sx={{ mb: 3 }}>
@@ -1193,30 +1193,84 @@ function RashadContent() {
               Team Progress
             </Typography>
             <Grid container spacing={2}>
-              {[
-                { team: "UI/UX Team", task: "Phase 2 Design" },
-                { team: "Front-End Team", task: "Phase 2 Implementation" },
-                { team: "Back-End Team", task: "Phase 2 APIs" },
-                { team: "AI Team", task: "Phase 2 Agents" },
-              ].map((t) => (
-                <Grid item xs={12} sm={6} md={3} key={t.team}>
-                  <Typography
-                    variant="caption"
-                    sx={{
-                      color: "text.secondary",
-                      fontWeight: 600,
-                      display: "block",
-                      mb: 1,
-                    }}
-                  >
-                    {t.team}
-                  </Typography>
-                  <Typography variant="body2" sx={{ mb: 0.5 }}>
-                    {t.task}
-                  </Typography>
-                  <AnimatedProgressBar value={0} status="Not Started" />
-                </Grid>
-              ))}
+              <Grid item xs={12} sm={6} md={3}>
+                <Typography
+                  variant="caption"
+                  sx={{
+                    color: "text.secondary",
+                    fontWeight: 600,
+                    display: "block",
+                    mb: 1,
+                  }}
+                >
+                  UI/UX Team
+                </Typography>
+                <Typography variant="body2" sx={{ mb: 0.5 }}>
+                  Phase 2 Design
+                </Typography>
+                <AnimatedProgressBar value={80} status="In Progress" />
+              </Grid>
+              <Grid item xs={12} sm={6} md={3}>
+                <Typography
+                  variant="caption"
+                  sx={{
+                    color: "text.secondary",
+                    fontWeight: 600,
+                    display: "block",
+                    mb: 1,
+                  }}
+                >
+                  Front-End Team
+                </Typography>
+                <Typography variant="body2" sx={{ mb: 0.5 }}>
+                  Phase 2 Implementation
+                </Typography>
+                <AnimatedProgressBar value={0} status="Not Started" />
+              </Grid>
+              <Grid item xs={12} sm={6} md={3}>
+                <Typography
+                  variant="caption"
+                  sx={{
+                    color: "text.secondary",
+                    fontWeight: 600,
+                    display: "block",
+                    mb: 1,
+                  }}
+                >
+                  Back-End Team
+                </Typography>
+                <Typography variant="body2" sx={{ mb: 0.5 }}>
+                  Phase 2 APIs
+                </Typography>
+                <AnimatedProgressBar value={0} status="Not Started" />
+              </Grid>
+              <Grid item xs={12} sm={6} md={3}>
+                <Typography
+                  variant="caption"
+                  sx={{
+                    color: "text.secondary",
+                    fontWeight: 600,
+                    display: "block",
+                    mb: 1,
+                  }}
+                >
+                  AI Team
+                </Typography>
+                <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5 }}>
+                  <Box>
+                    <Typography variant="body2" sx={{ mb: 0.5 }}>
+                      Proposal Agent
+                    </Typography>
+                    <AnimatedProgressBar value={30} status="In Progress" />
+                  </Box>
+                  <Box>
+                    <Typography variant="body2" sx={{ mb: 0.5 }}>
+                      Presentation Agent
+                    </Typography>
+                    <AnimatedProgressBar value={30} status="In Progress" />
+                  </Box>
+                </Box>
+              </Grid>
             </Grid>
           </Card>
         </Grid>
@@ -3675,7 +3729,7 @@ export default function ProjectsSection() {
               color: "#ef5350",
             },
             {
-              label: "Phase 1 / 7",
+              label: "Phase 2 / 7",
               bg: "rgba(190,14,91,0.2)",
               color: "primary.light",
             },
